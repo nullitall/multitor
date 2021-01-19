@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#run this script like sh multitor.sh 10(replacing the number with as many tor instances as you want)
+
 #removes old data folder and kills tor processes
 rm -rf data 
 killall tor
@@ -24,6 +26,6 @@ do
                 echo "Creating directory data/tor$i"
                 mkdir "/home/USERNAME/data/tor$i"
         fi
-
+        #runs tor instances based off sh multitor.sh 5 
         tor --RunAsDaemon 1 --CookieAuthentication 0 --PidFile /home/USERNAME/data/tor$i.pid --SocksPort $ip_addr:$socks_port --DataDirectory /home/USERNAME/data/tor$i
 done
