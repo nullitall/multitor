@@ -1,6 +1,6 @@
 !/bin/bash
 
-
+#removes old data folder and kills tor processes
 rm -rf data 
 killall tor
 set -e
@@ -19,6 +19,7 @@ for i in $(seq $TOR_INSTANCES)
 do
         j=$((i+1))
         socks_port=$((base_socks_port+i))
+        #INSERT YOUR DIRECTORY USERNAME IN ALL THE PLACES IT SAYS USERNAME
         if [ ! -d "/home/USERNAME/data/tor$i" ]; then
                 echo "Creating directory data/tor$i"
                 mkdir "/home/USERNAME/data/tor$i"
