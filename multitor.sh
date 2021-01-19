@@ -25,7 +25,5 @@ do
                 mkdir "/home/USERNAME/data/tor$i"
         fi
 
-        # Take into account that authentication for the control port is disabled. Must be used in secure and controlled environments
-
         tor --RunAsDaemon 1 --CookieAuthentication 0 --PidFile /home/USERNAME/data/tor$i.pid --SocksPort $ip_addr:$socks_port --DataDirectory /home/USERNAME/data/tor$i
 done
