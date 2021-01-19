@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 #removes old data folder and kills tor processes
 rm -rf data 
