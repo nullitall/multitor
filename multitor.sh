@@ -14,8 +14,7 @@ fi
 
 TOR_INSTANCES="$1"
 #change to your ip address
-ip_addr=192.168.1.102
-
+ip_addr=192.168.1.15
 for i in $(seq $TOR_INSTANCES)
 do
         j=$((i+1))
